@@ -13,7 +13,7 @@ try {
     echo $e->getMessage();
 }
 
-$sql = "INSERT INTO achtbaan (Id
+$sql = "INSERT INTO Afspraak (Id
                         ,blue
                         ,pink
                         ,purple

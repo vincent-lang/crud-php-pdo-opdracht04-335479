@@ -64,7 +64,7 @@ foreach ($result as $info) {
 
 
 <h3>Tabel achtbaan</h3>
-<a href="index.php"><button>nieuwe achtbaan</button></a>
+<a href="index.php"><button>Nieuwe afspraak</button></a>
 <table border="1">
     <thead>
         <th>Id</th>
