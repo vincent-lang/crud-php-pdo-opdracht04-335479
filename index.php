@@ -24,7 +24,7 @@
         <input type="email" name="email" id="email" placeholder="randomperson@example.com" required>
         <br>
         <p>Afspraak datum:</p>
-        <input type="datetime-local" name="date" id="date" required>
+        <input type="datetime-local" name="datum" id="datum" required>
         <br>
         Nagelbijt arrangement (termijnbetaling mogelijk) €180
         <input type="checkbox" name="nagelbijt" id="nagelbijt">
