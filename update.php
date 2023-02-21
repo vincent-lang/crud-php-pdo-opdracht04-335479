@@ -55,14 +55,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $sql = "SELECT Id
-              ,naam_achtbaan as NA
-              ,naam_pretpark as NP
-              ,naam_land as NL
-              ,topsnelheid as TS
-              ,hoogte as H
+              ,blue as B
+              ,pink as PI
+              ,purple as PU
+              ,red as R
+              ,tel as T
+              ,email as E
               ,datum as D
-              ,cijfer as C
-        FROM achtbaan
+              ,nagelbijt as NB
+              ,luxemanicure as LM
+              ,nagelreparatie as NR
+        FROM Afspraak
         WHERE Id = :Id";
 
 $statement = $pdo->prepare($sql);
