@@ -16,14 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     try {
 
-        $sql = "UPDATE achtbaan
+        $sql = "UPDATE Afspraak
             Set     blue = :blue,
                     pink = :pink,
                     purple = :purple,
                     red = :red,
                     tel = :tel,
                     email = :email,
-                    datum = :datum
+                    datum = :datum,
                     nagelbijt = :nagelbijt,
                     luxemanicure = :luxemanicure,
                     nagelreparatie = :nagelreparatie
@@ -88,43 +88,39 @@ $result = $statement->fetch(PDO::FETCH_OBJ);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/anon.png" type="image/x-icon">
-    <title>De 5 snelste achtbanen van Europa</title>
+    <title>Nagelstudio Chantal</title>
 </head>
-
 <body>
-    <h3>Invoer Achtbaan</h3>
+    <h3>Bling Bling Nagelstudio Chantal</h3>
 
     <form action="update.php" method="post">
         <fieldset>
-            <label for="naam_achtbaan">Naam Achtbaan:</label>
-            <br>
-            <input type="text" name="naam_achtbaan" id="naam_achtbaan" value="<?= $result->NA ?>">
-            <br>
-            <label for="naam_pretpark">Naam Pretpark:</label>
-            <br>
-            <input type="text" name="naam_pretpark" id="naam_pretpark" value="<?= $result->NP ?>">
-            <br>
-            <label for="naam_land">Naam Land:</label>
-            <br>
-            <input type="text" name="naam_land" id="naam_land" value="<?= $result->NL ?>">
-            <br>
-            <label for="topsnelheid">Topsnelheid (km/u):</label>
-            <br>
-            <input type="number" name="topsnelheid" id="topsnelheid" min="1" max="200" value="<?= $result->TS ?>">
-            <br>
-            <label for="hoogte">Hoogte (m):</label>
-            <br>
-            <input type="number" name="hoogte" id="hoogte" min="1" max="200" value="<?= $result->H ?>">
-            <br>
-            <label for="datum">Datum eerste opening:</label>
-            <br>
-            <input type="date" name="datum" id="datum" value="<?= $result->D ?>">
-            <br>
-            <label for="cijfer" value="<?= $result->C ?>">Cijfer voor achtbaan:</label>
-            <br>
-            <input type="range" name="cijfer" id="cijfer" min="1" max="10" step="0.1" oninput="num.value = this.value" value="<?= $result->C ?>">
-            <output id="num">5.5</output>
-            <br>
+        <p>Kies 4 basis kleuren voor uw nagels:</p>
+        <label for="blue">color1:</label>
+        <input type="color" name="blue" id="blue" value="<?= $result->B ?>">
+        <label for="pink">color2:</label>
+        <input type="color" name="pink" id="pink" value="<?= $result->PI ?>">
+        <label for="purple">color3:</label>
+        <input type="color" name="purple" id="purple" value="<?= $result->PU ?>">
+        <label for="red">color4:</label>
+        <input type="color" name="red" id="red" value="<?= $result->R ?>">
+        <br>
+        <label for="tel">Uw telefoonnummer:</label>
+        <input type="tel" name="tel" id="tel" pattern=".{3,16}" placeholder="+31 6 30694820" required value="<?= $result->T ?>">
+        <br>
+        <label for="email">Uw e-mailadres:</label>
+        <input type="email" name="email" id="email" placeholder="randomperson@example.com" required value="<?= $result->E ?>">
+        <br>
+        <label for="datum">Afspraak datum:</label>
+        <input type="datetime-local" name="datum" id="datum" required value="<?= $result->D ?>">
+        <br>
+        <label for="nagelbijt">Nagelbijt arrangement (termijnbetaling mogelijk) €180</label>
+        <input type="checkbox" name="nagelbijt" id="nagelbijt" value="<?= $result->NB ?>">
+        <label for="luxemanicure">Luxe manicure (massage en handpakking) €30,00</label>
+        <input type="checkbox" name="luxemanicure" id="luxemanicure" value="<?= $result->LM ?>">
+        <label for="nagelreparatie">Nagelreparatie per nagel (in eerste week gratis) €5,00</label>
+        <input type="checkbox" name="nagelreparatie" id="nagelreparatie" value="<?= $result->NR ?>">
+        <br>
             <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
             <input id="submit" type="submit" value="Sla op">
         </fieldset>
