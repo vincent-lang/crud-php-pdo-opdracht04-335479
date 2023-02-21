@@ -17,13 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
 
         $sql = "UPDATE achtbaan
-            Set     naam_achtbaan = :naam_achtbaan,
-            naam_pretpark = :naam_pretpark,
-            naam_land = :naam_land,
-            topsnelheid = :topsnelheid,
-            hoogte = :hoogte,
-            datum = :datum,
-            cijfer = :cijfer
+            Set     blue = :blue,
+                    pink = :pink,
+                    purple = :purple,
+                    red = :red,
+                    tel = :tel,
+                    email = :email,
+                    datum = :datum
+                    nagelbijt = :nagelbijt,
+                    luxemanicure = :luxemanicure,
+                    nagelreparatie = :nagelreparatie
                 WHERE   Id = :id";
 
         $statement = $pdo->prepare($sql);
