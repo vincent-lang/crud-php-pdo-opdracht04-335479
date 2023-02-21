@@ -18,7 +18,7 @@
         <input type="color" name="red" id="red" value="#ff0000">
         <br>
         <p>Uw telefoonnummer:</p>
-        <input type="tel" name="tel" id="tel" pattern="nl" placeholder="+31 6 30694820" required>
+        <input type="tel" name="tel" id="tel" pattern="\w{3,16}" placeholder="+31 6 30694820" required>
         <br>
         <p>Uw e-mailadres:</p>
         <input type="email" name="email" id="email" placeholder="randomperson@example.com" required>
@@ -26,8 +26,14 @@
         <p>Afspraak datum:</p>
         <input type="datetime-local" name="date" id="date" required>
         <br>
-        <p></p>
+        Nagelbijt arrangement (termijnbetaling mogelijk) €180
+        <input type="checkbox" name="nagelbijt" id="nagelbijt">
+        Luxe manicure (massage en handpakking) €30,00
+        <input type="checkbox" name="luxemanicure" id="luxemanicure">
+        Nagelreparatie per nagel (in eerste week gratis) €5,00
+        <input type="checkbox" name="nagelreparatie" id="nagelreparatie">
             <input id="submit" type="submit" value="Sla op">
+            <input id="reset" type="reset" value="reset">
         </fieldset>
     </form>
     <script src="js/test.js"></script>
