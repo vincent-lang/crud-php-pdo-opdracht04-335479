@@ -14,14 +14,17 @@ try {
 }
 
 $sql = "SELECT Id
-            ,naam_achtbaan
-            ,naam_pretpark
-            ,naam_land
-            ,topsnelheid
-            ,hoogte
+            ,blue
+            ,pink
+            ,purple
+            ,red
+            ,tel
+            ,email
             ,datum
-            ,cijfer
-        FROM achtbaan
+            ,nagelbijt
+            ,luxemanicure
+            ,nagelreparatie
+        FROM Afspraak
         ORDER BY Id ASC";
 
 $statement = $pdo->prepare($sql);
@@ -34,13 +37,16 @@ $rows = "";
 foreach ($result as $info) {
     $rows .= "<tr>
                 <td>$info->Id</td>
-                <td>$info->naam_achtbaan</td>
-                <td>$info->naam_pretpark</td>
-                <td>$info->naam_land</td>
-                <td>$info->topsnelheid</td>
-                <td>$info->hoogte</td>
+                <td>$info->blue</td>
+                <td>$info->pink</td>
+                <td>$info->purple</td>
+                <td>$info->red</td>
+                <td>$info->tel</td>
+                <td>$info->email</td>
                 <td>$info->datum</td>
-                <td>$info->cijfer</td>
+                <td>$info->nagelbijt</td>
+                <td>$info->luxemanicure</td>
+                <td>$info->nagelreparatie</td>
                 <td>
                     <a href='delete.php?id={$info->Id}'>
                         <img src='img/b_drop.png' alt='Drop'</img>
@@ -62,13 +68,16 @@ foreach ($result as $info) {
 <table border="1">
     <thead>
         <th>Id</th>
-        <th>NaamAchtbaan</th>
-        <th>NaamPretpark</th>
-        <th>Land</th>
-        <th>Topsnelheid</th>
-        <th>Hoogte</th>
+        <th>color1</th>
+        <th>color2</th>
+        <th>color3</th>
+        <th>color4</th>
+        <th>Tel</th>
+        <th>Email</th>
         <th>Datum</th>
-        <th>Cijfer</th>
+        <th>Nagelbijt</th>
+        <th>Luxemanicure</th>
+        <th>Nagelreparatie</th>
         <th></th>
         <th></th>
     </thead>
