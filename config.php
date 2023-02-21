@@ -1,6 +1,6 @@
 <?php
 
 $dbHost = "localhost";
-$dbName = "atractiepark";
+$dbName = "Nailstudio";
 $dbUser = "vdvm";
 $dbPass = "33_)Q65TofrzaKMt";

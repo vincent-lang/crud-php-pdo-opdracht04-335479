@@ -18,7 +18,7 @@
         <input type="color" name="red" id="red" value="#ff0000">
         <br>
         <p>Uw telefoonnummer:</p>
-        <input type="tel" name="tel" id="tel" pattern="\w{3,16}" placeholder="+31 6 30694820" required>
+        <input type="tel" name="tel" id="tel" pattern=".{3,16}" placeholder="+31 6 30694820" required>
         <br>
         <p>Uw e-mailadres:</p>
         <input type="email" name="email" id="email" placeholder="randomperson@example.com" required>
@@ -34,8 +34,8 @@
         <input type="checkbox" name="nagelreparatie" id="nagelreparatie">
             <input id="submit" type="submit" value="Sla op">
             <input id="reset" type="reset" value="reset">
+            <input type="hidden" name="submit" value="datetime-local">
         </fieldset>
     </form>
-    <script src="js/test.js"></script>
 </body>
 </html>
