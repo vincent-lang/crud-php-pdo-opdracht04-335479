@@ -6,41 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/anon.png" type="image/x-icon">
-    <title>De 5 snelste achtbanen van Europa</title>
+    <title>Nagelstudio Chantal</title>
 </head>
 <body>
-    <h1>Invoer Achtbaan</h1>
+    <h1>Bling Bling Nagelstudio Chantal</h1>
     <form action="create.php" method="post">
-        <fieldset>
-            <label for="naam_achtbaan">Naam Achtbaan:</label>
-            <br>
-            <input type="text" name="naam_achtbaan" id="naam_achtbaan">
-            <br>
-            <label for="naam_pretpark">Naam Pretpark:</label>
-            <br>
-            <input type="text" name="naam_pretpark" id="naam_pretpark">
-            <br>
-            <label for="naam_land">Naam Land:</label>
-            <br>
-            <input type="text" name="naam_land" id="naam_land">
-            <br>
-            <label for="topsnelheid">Topsnelheid (km/u):</label>
-            <br>
-            <input type="number" name="topsnelheid" id="topsnelheid" min="1" max="200">
-            <br>
-            <label for="hoogte">Hoogte (m):</label>
-            <br>
-            <input type="number" name="hoogte" id="hoogte" min="1" max="200">
-            <br>
-            <label for="datum">Datum eerste opening:</label>
-            <br>
-            <input type="date" name="datum" id="datum">
-            <br>
-            <label for="cijfer">Cijfer voor achtbaan:</label>
-            <br>
-            <input type="range" name="cijfer" id="cijfer" min="1" max="10" step="0.1" oninput="num.value = this.value">
-            <output id="num">5.5</output>
-            <br>
+        <p>Kies 4 basis kleuren voor uw nagels:</p>
+        <input type="color" name="blue" id="blue" value="#0000ff">
+        <input type="color" name="pink" id="pink" value="#ffc0cb">
+        <input type="color" name="purple" id="purple" value="#A020F0">
+        <input type="color" name="red" id="red" value="#ff0000">
+        <br>
+        <p>Uw telefoonnummer:</p>
+        <input type="tel" name="tel" id="tel" pattern="nl" placeholder="+31 6 30694820" required>
+        <br>
+        <p>Uw e-mailadres:</p>
+        <input type="email" name="email" id="email" placeholder="randomperson@example.com" required>
+        <br>
+        <p>Afspraak datum:</p>
+        <input type="datetime-local" name="date" id="date" required>
+        <br>
+        <p></p>
             <input id="submit" type="submit" value="Sla op">
         </fieldset>
     </form>
