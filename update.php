@@ -31,13 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $statement = $pdo->prepare($sql);
         $statement->bindValue(":id", $_POST["id"], PDO::PARAM_INT);
-        $statement->bindValue(":naam_achtbaan", $_POST["naam_achtbaan"], PDO::PARAM_STR);
-        $statement->bindValue(":naam_pretpark", $_POST["naam_pretpark"], PDO::PARAM_STR);
-        $statement->bindValue(":naam_land", $_POST["naam_land"], PDO::PARAM_STR);
-        $statement->bindValue(":topsnelheid", $_POST["topsnelheid"], PDO::PARAM_STR);
-        $statement->bindValue(":hoogte", $_POST["hoogte"], PDO::PARAM_STR);
+        $statement->bindValue(":blue", $_POST["blue"], PDO::PARAM_STR);
+        $statement->bindValue(":pink", $_POST["pink"], PDO::PARAM_STR);
+        $statement->bindValue(":purple", $_POST["purple"], PDO::PARAM_STR);
+        $statement->bindValue(":red", $_POST["red"], PDO::PARAM_STR);
+        $statement->bindValue(":tel", $_POST["tel"], PDO::PARAM_STR);
+        $statement->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         $statement->bindValue(":datum", $_POST["datum"], PDO::PARAM_STR);
-        $statement->bindValue(":cijfer", $_POST["cijfer"], PDO::PARAM_STR);
+        $statement->bindValue(":nagelbijt", $_POST["nagelbijt"], PDO::PARAM_STR);
+        $statement->bindValue(":luxemanicure", $_POST["luxemanicure"], PDO::PARAM_STR);
+        $statement->bindValue(":nagelreparatie", $_POST["nagelreparatie"], PDO::PARAM_STR);
 
         $statement->execute();
 
